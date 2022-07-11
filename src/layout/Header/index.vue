@@ -7,7 +7,7 @@ import MenuItemDialog from "./components/MenuItemDialog.vue";
 const route = useRoute();
 const router = useRouter();
 const data = reactive<Headers.DataType>({
-	activeIndex: "/home/index",
+	activeIndex: "",
 	isRouter: true,
 	title: "",
 	menuItemList: [
@@ -36,17 +36,17 @@ const handleSelect = (key: string, keyPath: string[], item: any) => {
 		<header>
 			<div class="main">
 				<el-menu :default-active="data.activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-					<el-menu-item index="/home">首页</el-menu-item>
-					<el-menu-item index="/myOrder">我的订单</el-menu-item>
-					<el-menu-item index="/placeOrder">办理保函</el-menu-item>
+					<el-menu-item index="/home/index">首页</el-menu-item>
+					<el-menu-item index="/myOrder/index">我的订单</el-menu-item>
+					<el-menu-item index="/placeOrder/index">办理保函</el-menu-item>
 					<el-sub-menu index="2">
 						<template #title>保函检查</template>
 						<el-menu-item :index="item.index" v-for="item in data.menuItemList" :key="item.index">{{ item.label }}</el-menu-item>
 					</el-sub-menu>
-					<el-menu-item index="/drawback">索赔受理</el-menu-item>
-					<el-menu-item index="/myInfo">我的信息</el-menu-item>
-					<el-menu-item index="/help">帮助中心</el-menu-item>
-					<el-menu-item index="/product">产品咨询</el-menu-item>
+					<el-menu-item index="/drawback/index">索赔受理</el-menu-item>
+					<el-menu-item index="/myInfo/index">我的信息</el-menu-item>
+					<el-menu-item index="/help/index">帮助中心</el-menu-item>
+					<el-menu-item index="/product/index">产品咨询</el-menu-item>
 				</el-menu>
 			</div>
 			<div class="left">
