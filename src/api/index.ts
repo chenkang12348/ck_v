@@ -13,6 +13,8 @@ const axiosCancel = new AxiosCanceler();
 // 引入pinia
 import { GlobalStore } from "@/store/modules/GlobalStore";
 const globalStore = GlobalStore();
+// 清除本地缓存
+import { removeAllItem } from "@/utils/storage";
 // axios配置
 const config = {
 	// 默认地址请求地址，可在 .env 开头文件中修改
@@ -72,7 +74,7 @@ service.interceptors.response.use(
 			ElMessage.error(data.message || "未知错误");
 			// 登录超时
 			if (data.code === 401) {
-				globalStore.setToken("");
+				removeAllItem(); //清除本地缓存
 				router.replace({
 					path: "/login"
 				});

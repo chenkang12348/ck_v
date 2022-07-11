@@ -1,20 +1,20 @@
 import { RouteRecordRaw } from "vue-router";
 
-// 首页模块
+// 我的订单
 
 const homeRoute: RouteRecordRaw[] = [
 	{
-		path: "/home",
+		path: "/myOrder",
 		component: () => import("@/layout/index.vue"),
-		redirect: "/home/index",
+		redirect: "/myOrder/index",
 		children: [
 			{
 				path: "index",
-				name: "home",
-				component: () => import("@/views/home/index.vue"),
+				name: "myOrder",
+				component: () => import("@/views/myOrder/index.vue"),
 				meta: {
-					title: "首页",
-					key: "home"
+					title: "我的订单",
+					key: "myOrder"
 				}
 			}
 		]

@@ -13,6 +13,7 @@ export namespace Login {
 	export interface DataType {
 		ruleForm: FromData;
 		rules: FormRules;
+		isLoading: boolean;
 		[key: string]: any;
 	}
 }

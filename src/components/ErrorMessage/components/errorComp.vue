@@ -2,7 +2,7 @@
 import { useRouter } from "vue-router";
 const router = useRouter();
 const handleBtn = () => {
-	router.replace({ name: "login" });
+	router.replace({ name: "home" });
 };
 </script>
 

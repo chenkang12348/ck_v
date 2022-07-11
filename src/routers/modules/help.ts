@@ -1,20 +1,20 @@
 import { RouteRecordRaw } from "vue-router";
 
-// 首页模块
+// 帮助中心
 
 const homeRoute: RouteRecordRaw[] = [
 	{
-		path: "/home",
+		path: "/help",
 		component: () => import("@/layout/index.vue"),
-		redirect: "/home/index",
+		redirect: "/help/index",
 		children: [
 			{
 				path: "index",
-				name: "home",
-				component: () => import("@/views/home/index.vue"),
+				name: "help",
+				component: () => import("@/views/help/index.vue"),
 				meta: {
-					title: "首页",
-					key: "home"
+					title: "帮助中心",
+					key: "help"
 				}
 			}
 		]

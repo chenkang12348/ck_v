@@ -1,20 +1,18 @@
 import { RouteRecordRaw } from "vue-router";
-
-// 首页模块
-
+// 索赔受理
 const homeRoute: RouteRecordRaw[] = [
 	{
-		path: "/home",
+		path: "/drawback",
 		component: () => import("@/layout/index.vue"),
-		redirect: "/home/index",
+		redirect: "/drawback/index",
 		children: [
 			{
 				path: "index",
-				name: "home",
-				component: () => import("@/views/home/index.vue"),
+				name: "drawback",
+				component: () => import("@/views/drawback/index.vue"),
 				meta: {
-					title: "首页",
-					key: "home"
+					title: "索赔",
+					key: "drawback"
 				}
 			}
 		]
