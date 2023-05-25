@@ -72,8 +72,9 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 				"@": resolve(__dirname, "./src")
 			}
 		},
+		base:"/ck_v/",
 		build:{
-			outDir:"docs"
+			outDir:"docs",
 		}
 	};
 });
