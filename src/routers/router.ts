@@ -22,15 +22,15 @@ const routes: RouteRecordRaw[] = [
 			key: "index"
 		}
 	},
-	// {
-	// 	path: "/login",
-	// 	name: "login",
-	// 	component: () => import("@/views/login/index.vue"),
-	// 	meta: {
-	// 		title: "登录页",
-	// 		key: "login"
-	// 	}
-	// },
+	{
+		path: "/login",
+		name: "login",
+		component: () => import("@/views/login/index.vue"),
+		meta: {
+			title: "登录页",
+			key: "login"
+		}
+	},
 	...routerArray,
 	// 找不到页面重定向到404
 	{ path: "/:pathMatch(.*)", redirect: { name: "404" } }

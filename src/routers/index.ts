@@ -9,7 +9,7 @@ import { GlobalStore } from "@/store/modules/GlobalStore";
 const globalStore = GlobalStore(pinia); //这里一定要把 pinia传入进去
 
 // 路由白名单
-const routerWhiteList = ["/login", "/"];
+const routerWhiteList = ["/login", "/",'/index'];
 // 路由拦截
 router.beforeEach((to, from, next) => {
 	// 开启进度条
@@ -23,11 +23,11 @@ router.beforeEach((to, from, next) => {
 		return next();
 	}
 	// 判断token
-	const { token } = globalStore;
-	if (!token) {
-		NProgress.done();
-		return next({ path: "/login" });
-	}
+	// const { token } = globalStore;
+	// if (!token) {
+	// 	NProgress.done();
+	// 	return next({ path: "/login" });
+	// }
 
 	next();
 });
