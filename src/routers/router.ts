@@ -12,16 +12,25 @@ Object.keys(meatRouters).forEach(key => {
 
 // 路由
 const routes: RouteRecordRaw[] = [
-	{ path: "/", redirect: { name: "login" } },
+	{ path: "/", redirect: { name: "index" } },
 	{
-		path: "/login",
-		name: "login",
-		component: () => import("@/views/login/index.vue"),
+		path: "/index",
+		name: "index",
+		component: () => import("@/views/index/index.vue"),
 		meta: {
-			title: "登录页",
-			key: "login"
+			title: "首页",
+			key: "index"
 		}
 	},
+	// {
+	// 	path: "/login",
+	// 	name: "login",
+	// 	component: () => import("@/views/login/index.vue"),
+	// 	meta: {
+	// 		title: "登录页",
+	// 		key: "login"
+	// 	}
+	// },
 	...routerArray,
 	// 找不到页面重定向到404
 	{ path: "/:pathMatch(.*)", redirect: { name: "404" } }
