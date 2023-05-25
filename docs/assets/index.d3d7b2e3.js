@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper.21dcd24c.js";import{o as r,c}from"./index.6d66d801.js";const o={},t={class:"index-wrap"};function n(s,a){return r(),c("div",t," \u9996\u9875 ")}var d=e(o,[["render",n]]);export{d as default};
