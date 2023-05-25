@@ -16,4 +16,6 @@ import "@/styles/reset.scss";
 import "@/styles/common.scss";
 // 自定义指令
 import directives from "@/directives/index";
+// 引入mock 数据
+import "@/mock/index.ts";
 createApp(App).use(router).use(pinia).use(ElementPlus).use(directives).mount("#app");

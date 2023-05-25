@@ -33,18 +33,18 @@ const debounceClick = () => {
 <template>
 	<div class="login-wrap">
 		<LoginFrom :checked="data.checked">
-			<template #title>
-				<h1 class="title">电子保函</h1>
-			</template>
+			<!-- <template #title>
+				<h1 class="title">登录</h1>
+			</template> -->
 			<template #footer>
 				<div class="footer-wrap">
-					<div class="checkbox flx-align-center">
+					<!-- <div class="checkbox flx-align-center">
 						<el-checkbox v-model="data.checked" label="我已阅读并同意" />
 						<el-checkbox-group @change="showSLA">
 							<el-checkbox-button>《服务协议》</el-checkbox-button>
 						</el-checkbox-group>
-					</div>
-					<el-alert type="info" :closable="false">
+					</div> -->
+					<!-- <el-alert type="info" :closable="false">
 						<template #title>
 							<el-icon color="#e6a23c" class="icon-style" size="14px"><BellFilled /></el-icon>
 							<span
@@ -53,7 +53,7 @@ const debounceClick = () => {
 								>进行咨询</span
 							>
 						</template>
-					</el-alert>
+					</el-alert> -->
 				</div>
 			</template>
 		</LoginFrom>

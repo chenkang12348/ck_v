@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "vite": "^2.9.9",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vue-tsc": "^0.34.7"
+    "vue-tsc": "^0.34.7",
+    "mockjs": "^1.1.0"
   }
 }

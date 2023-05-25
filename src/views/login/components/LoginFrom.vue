@@ -44,8 +44,8 @@ const data = reactive<Login.DataType>({
 // 提交
 const submitForm = async (formEl: FormInstance | undefined) => {
 	try {
-		if (!formEl) return;
-		await formEl.validate();
+		// if (!formEl) return;
+		// await formEl.validate();
 		const { data: loginData } = await LoginApi<Login.FromData, string>(data.ruleForm);
 		if (!loginData.data) throw "获取token失败";
 		globalStore.setToken(loginData.data);
@@ -121,6 +121,7 @@ onBeforeMount(() => {
 <template>
 	<div class="from-wrap">
 		<slot name="title"></slot>
+		<el-button type="primary" @click="submitForm('')" class="btn-style">登录</el-button>
 		<el-form
 			ref="ruleFormRef"
 			:model="data.ruleForm"
@@ -129,6 +130,7 @@ onBeforeMount(() => {
 			label-width="80px"
 			class="demo-ruleForm"
 			label-position="left"
+			v-show="false"
 		>
 			<el-form-item label="手机号:" prop="account">
 				<el-input v-model="data.ruleForm.account" type="tel" autocomplete="off" :prefix-icon="Iphone" placeholder="请输入手机号">

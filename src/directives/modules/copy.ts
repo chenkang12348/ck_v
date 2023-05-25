@@ -23,9 +23,9 @@ const copy: Directive = {
 	}
 };
 
-const handleClick = () => {
+const handleClick = (e:any) => {
 	const input = document.createElement("input");
-	input.value = this.copyData.toLocaleString();
+	input.value = e.copyData.toLocaleString();
 	document.body.appendChild(input);
 	input.select();
 	document.execCommand("Copy");

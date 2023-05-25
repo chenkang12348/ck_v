@@ -56,25 +56,24 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			})
 		],
 		server: {
-			host: "localhost", // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
+			host: "127.0.0.1", // 服务器主机名，如果允许外部访问，可设置为"0.0.0.0"
 			port: Number(env.VITE_PORT),
 			open: env.VITE_OPEN === "true",
 			cors: true,
 			proxy: {
-				"/main": {
-					target: env.VITE_API_URL,
-					changeOrigin: true
-				},
-				"/test": {
-					target: env.VITE_API_URL,
-					changeOrigin: true
-				}
+				// "/api": {
+				//  target: env.VITE_API_URL,
+				// 	changeOrigin: true
+				// },
 			}
 		},
 		resolve: {
 			alias: {
 				"@": resolve(__dirname, "./src")
 			}
+		},
+		build:{
+			outDir:"docs"
 		}
 	};
 });

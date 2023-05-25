@@ -18,7 +18,8 @@ import { removeAllItem } from "@/utils/storage";
 // axios配置
 const config = {
 	// 默认地址请求地址，可在 .env 开头文件中修改
-	baseURL: import.meta.env.VITE_API_URL as string,
+	// baseURL: import.meta.env.VITE_API_URL as string,
+	baseURL:'',
 	// 设置超时时间（10s）
 	timeout: 10000
 };
