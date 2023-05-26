@@ -9,9 +9,12 @@ import { GlobalStore } from "@/store/modules/GlobalStore";
 const globalStore = GlobalStore(pinia); //这里一定要把 pinia传入进去
 
 // 路由白名单
-const routerWhiteList = ["/login", "/",'/index'];
+const routerWhiteList = ["/login", "/", '/index'];
 // 路由拦截
 router.beforeEach((to, from, next) => {
+	if (typeof (to.meta?.title) == 'string') {
+		document.title = to.meta?.title
+	}
 	// 开启进度条
 	NProgress.start();
 	// 路由跳转之前，清除所有请求
