@@ -5,14 +5,14 @@ import { App } from "vue";
 import debounce from "./modules/debounce";
 import throttle from "./modules/throttle";
 import copy from "./modules/copy";
-import longPress from "./modules/longPress";
+// import longPress from "./modules/longPress";
 import draggable from "./modules/draggable";
 import waterMarker from "./modules/waterMarker";
 const directivesList: any = {
 	debounce,
 	throttle,
 	copy,
-	longPress,
+	// longPress,
 	draggable,
 	waterMarker
 };

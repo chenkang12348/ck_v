@@ -2,13 +2,15 @@
 import { useRoute, useRouter } from "vue-router";
 import { onBeforeMount } from "vue";
 import headerComp from "./comp/header-comp.vue";
+import mainComp from "./comp/main-comp.vue";
 const route = useRoute();
 const router = useRouter();
 </script>
 
 <template>
 	<div class="index-wrap">
-		<header-comp></header-comp>
+		<header-comp v-show="true"></header-comp>
+		<main-comp> </main-comp>
 	</div>
 </template>
 
@@ -22,5 +24,10 @@ const router = useRouter();
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	.index-main-wrap{
+		flex: 1;
+	}
 }
 </style>
